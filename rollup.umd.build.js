@@ -73,6 +73,7 @@ async function build() {
               'Fragment',
               'Children',
               'createElement',
+              'createFactory',
             ],
             'node_modules/react-dom/index.js': ['render'],
           },
@@ -146,6 +147,9 @@ async function build() {
       file: resolvePath('lib/index.umd.js'),
       name: 'Pagination',
       exports: 'named',
+      globals: {
+        react: 'React',
+      },
     });
   } catch (error) {
     console.error(error);
