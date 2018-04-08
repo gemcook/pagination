@@ -1,0 +1,20 @@
+{
+  "presets": [
+    "@babel/preset-flow",
+    "@babel/preset-react",
+    "@babel/preset-stage-3"
+  ],
+  "plugins": [
+    "flow-react-proptypes",
+    ["@babel/plugin-proposal-class-properties", {"loose": true}],
+    "@babel/plugin-proposal-decorators",
+    "@babel/plugin-proposal-export-default-from",
+    "@babel/plugin-proposal-export-namespace-from",
+    "@babel/plugin-proposal-optional-chaining",
+    "@babel/plugin-syntax-class-properties",
+    "@babel/plugin-syntax-decorators",
+    "@babel/plugin-syntax-export-default-from",
+    "@babel/plugin-syntax-export-namespace-from",
+    "@babel/plugin-syntax-optional-chaining"
+  ]
+}
