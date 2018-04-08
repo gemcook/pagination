@@ -11,6 +11,7 @@ module.file_ext=.js
 module.file_ext=.mjs
 module.file_ext=.jsx
 module.file_ext=.json
+module.file_ext=.scss
 esproposal.class_instance_fields=enable
 esproposal.class_static_fields=enable
 esproposal.decorators=ignore

@@ -1,0 +1,58 @@
+.rc-pagination {
+  .rc-pagination-prev {
+    border: 0;
+  }
+
+  .rc-pagination-next {
+    border: 0;
+  }
+
+  .rc-pagination-item {
+    border: 0;
+
+    &:hover {
+      opacity: 0.8;
+
+      a {
+        color: $p__main-color;
+      }
+    }
+  }
+
+  .rc-pagination-item-active {
+    background: {
+      color: $p__main-color;
+    }
+
+    color: white;
+
+    &:hover {
+      opacity: 0.8;
+
+      a {
+        color: white;
+      }
+    }
+
+    &:focus {
+      background: {
+        color: $p__main-color;
+      }
+
+      color: white;
+    }
+
+    &:active {
+      background: {
+        color: $p__main-color;
+      }
+
+      color: white;
+    }
+  }
+
+  .rc-pagination-jump-prev:hover::after,
+  .rc-pagination-jump-next:hover::after {
+    color: $p__main-color;
+  }
+}
