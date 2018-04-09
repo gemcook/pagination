@@ -3,8 +3,6 @@ import React from 'react';
 import enhance from './enhance';
 import RcPagination from 'rc-pagination';
 
-import '../styles/index.scss';
-
 function Pagination(props) {
   const {changePage, currentPage, total} = props;
 
