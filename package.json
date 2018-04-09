@@ -29,6 +29,12 @@
     "@babel/preset-react": "7.0.0-beta.40",
     "@babel/preset-stage-3": "7.0.0-beta.40",
     "@babel/runtime": "7.0.0-beta.40",
+    "@storybook/addon-actions": "^3.4.0",
+    "@storybook/addon-info": "3.4.0",
+    "@storybook/addon-links": "^3.4.0",
+    "@storybook/addon-viewport": "3.4.0",
+    "@storybook/addons": "^3.4.0",
+    "@storybook/react": "^3.4.0",
     "autoprefixer": "8.2.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "8.2.1",
@@ -78,7 +84,9 @@
   },
   "scripts": {
     "build:umd": "node rollup.umd.build.js",
-    "prepublish": "make prepublish"
+    "prepublish": "make prepublish",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "classnames": "2.2.5",
