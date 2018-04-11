@@ -19,5 +19,5 @@ storiesOf('Welcome', module).add('to Storybook', () => (
 
 storiesOf('Pagination', module)
   .addDecorator((story, context) => withInfo('common info')(story)(context))
-  .add('no data', () => <Pagination />)
-  .add('with props', () => <Pagination currentPage={1} total={10} />);
+  .add('no props', () => <Pagination />)
+  .add('with props', () => <Pagination currentPage={1} total={30} />);
