@@ -1,15 +1,11 @@
 {
   "name": "@gemcook/pagination",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "lib/index.umd.js",
   "repository": "https://github.com/gemcook/pagination.git",
   "author": "Gemcook, Inc.",
   "license": "MIT",
-  "files": [
-    "lib",
-    "README.md",
-    "LICENSE"
-  ],
+  "files": ["lib", "README.md", "LICENSE"],
   "devDependencies": {
     "@babel/cli": "7.0.0-beta.40",
     "@babel/core": "7.0.0-beta.40",
