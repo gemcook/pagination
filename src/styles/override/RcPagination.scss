@@ -14,14 +14,14 @@
       opacity: 0.8;
 
       a {
-        color: $p__main-color;
+        color: $pagination__main-color;
       }
     }
   }
 
   .rc-pagination-item-active {
     background: {
-      color: $p__main-color;
+      color: $pagination__main-color;
     }
 
     color: white;
@@ -36,7 +36,7 @@
 
     &:focus {
       background: {
-        color: $p__main-color;
+        color: $pagination__main-color;
       }
 
       color: white;
@@ -44,7 +44,7 @@
 
     &:active {
       background: {
-        color: $p__main-color;
+        color: $pagination__main-color;
       }
 
       color: white;
@@ -53,6 +53,6 @@
 
   .rc-pagination-jump-prev:hover::after,
   .rc-pagination-jump-next:hover::after {
-    color: $p__main-color;
+    color: $pagination__main-color;
   }
 }
