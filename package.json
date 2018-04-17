@@ -1,6 +1,6 @@
 {
   "name": "@gemcook/pagination",
-  "version": "0.2.0",
+  "version": "0.1.7",
   "main": "lib/index.umd.js",
   "repository": "https://github.com/gemcook/pagination.git",
   "author": "Gemcook, Inc.",
@@ -9,6 +9,13 @@
     "lib",
     "README.md",
     "LICENSE"
+  ],
+  "keywords": [
+    "gemcook",
+    "react",
+    "react-component",
+    "pagination",
+    "react-pagination"
   ],
   "devDependencies": {
     "@babel/cli": "7.0.0-beta.40",
