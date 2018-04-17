@@ -8,7 +8,7 @@ import {Pagination} from '../src';
 import {withState} from '@dump247/storybook-state';
 import '../src/styles/index.scss';
 
-storiesOf('Welcome', module).add('to Storybook', () => (
+storiesOf('Welcome', module).add('to Gemcook Component', () => (
   <Welcome showApp={linkTo('Button')} />
 ));
 

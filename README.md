@@ -1,4 +1,4 @@
-# [@gemcook/pagination](http://pagination.storybook.gemcook.com)
+# [@gemcook/pagination](https://pagination.storybook.gemcook.com)
 
 ---
 
@@ -6,7 +6,7 @@ React Pagination Component.
 
 ## Online Demo
 
-* http://pagination.storybook.gemcook.com
+* https://pagination.storybook.gemcook.com
 
 ## Installation
 
