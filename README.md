@@ -4,22 +4,22 @@
 
 React Pagination Component.
 
-### Demo
+### Online Demo
 
-http://pagination.storybook.gemcook.com
+* http://pagination.storybook.gemcook.com
 
 ## Getting Started
 
 ### Installation
 
 ```shell
-$ npm install --save @gemcook/pagination
+npm install --save @gemcook/pagination
 ```
 
 or
 
 ```shell
-$ yarn add @gemcook/pagination
+yarn add @gemcook/pagination
 ```
 
 ### Usage
@@ -39,3 +39,7 @@ $ yarn add @gemcook/pagination
 #### Props
 
 #### API
+
+### License
+
+@gemcook/pagination is released under the MIT license.
