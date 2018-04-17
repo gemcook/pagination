@@ -8,8 +8,6 @@ React Pagination Component.
 
 * http://pagination.storybook.gemcook.com
 
-# Getting Started
-
 ## Installation
 
 ```shell
