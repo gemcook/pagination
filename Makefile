@@ -20,3 +20,6 @@ prepublish:
 	cp -r ./src/styles/ ./lib/styles/
 
 	mv ./base.css ./lib/base.css
+
+build:
+	yarn run build-storybook
