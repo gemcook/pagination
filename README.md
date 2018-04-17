@@ -1,8 +1,22 @@
 # @gemcook/pagination
 
-# Documentation
+## Demo
 
-# Examples
+# Getting Started
+
+## Installation
+
+```
+$ npm install --save @gemcook/pagination
+```
+
+or
+
+```
+yarn add @gemcook/pagination
+```
+
+## Usage
 
 ```
 <Pagination
@@ -14,6 +28,8 @@
 />
 ```
 
-# Props
+## Documentaion
 
-# API
+### Props
+
+### API
