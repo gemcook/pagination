@@ -4,15 +4,18 @@ import enhance from './enhance';
 import RcPagination from 'rc-pagination';
 import 'rc-pagination/assets/index.css';
 import './../styles/index.scss';
+import {en_US, ja_JP} from './../locale';
 
 type Props = {
   changePage: () => void,
   current: number,
   total: number,
+  simple?: boolean,
+  locale?: string,
 };
 
 function Pagination(props: Props) {
-  const {changePage, current, total} = props;
+  const {changePage, current, total, simple, locale} = props;
 
   return (
     <div className="gc__pagination">
@@ -23,6 +26,8 @@ function Pagination(props: Props) {
         style={{
           display: total ? 'block' : 'none',
         }}
+        simple={simple}
+        locale={locale === 'en_US' ? en_US : ja_JP}
       />
     </div>
   );

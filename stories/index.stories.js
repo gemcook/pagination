@@ -27,4 +27,48 @@ storiesOf('Pagination', module)
         />
       );
     }),
+  )
+  .add(
+    'simple',
+    withState({current: 1})(({store}) => {
+      return (
+        <Pagination
+          current={store.state.current}
+          total={100}
+          changePage={current => {
+            store.set({current});
+          }}
+          simple
+        />
+      );
+    }),
+  )
+  .add(
+    'locale en_US',
+    withState({current: 1})(({store}) => {
+      return (
+        <Pagination
+          current={store.state.current}
+          total={100}
+          changePage={current => {
+            store.set({current});
+          }}
+          locale="en_US"
+        />
+      );
+    }),
+  )
+  .add(
+    'total is 0',
+    withState({current: 1})(({store}) => {
+      return (
+        <Pagination
+          current={store.state.current}
+          total={0}
+          changePage={current => {
+            store.set({current});
+          }}
+        />
+      );
+    }),
   );
