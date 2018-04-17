@@ -1,9 +1,9 @@
 /* @flow */
 export default function pagination(
-  data: [],
+  data: Array<*>,
   currentPage: number,
   updateCurrentPage: number => void,
-) {
+): Array<*> {
   let startIndex;
   let endIndex;
   let targetPage = currentPage;

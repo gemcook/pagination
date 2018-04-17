@@ -1,3 +1,3 @@
 /* @flow */
-export * from './Pagination';
-export * from './utils';
+export {default as Pagination} from './Pagination';
+export {asyncPagination, syncPagination} from './utils';
