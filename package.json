@@ -5,7 +5,11 @@
   "repository": "https://github.com/gemcook/pagination.git",
   "author": "Gemcook, Inc.",
   "license": "MIT",
-  "files": ["lib", "README.md", "LICENSE"],
+  "files": [
+    "lib",
+    "README.md",
+    "LICENSE"
+  ],
   "devDependencies": {
     "@babel/cli": "7.0.0-beta.40",
     "@babel/core": "7.0.0-beta.40",
@@ -85,6 +89,7 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@dump247/storybook-state": "^1.4.0",
     "classnames": "2.2.5",
     "prop-types": "15.6.1",
     "rc-pagination": "1.16.2",

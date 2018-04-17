@@ -7,18 +7,18 @@ import './../styles/index.scss';
 
 type Props = {
   changePage: () => void,
-  currentPage: number,
+  current: number,
   total: number,
 };
 
 function Pagination(props: Props) {
-  const {changePage, currentPage, total} = props;
+  const {changePage, current, total} = props;
 
   return (
     <div className="gc__pagination">
       <RcPagination
         onChange={changePage}
-        current={currentPage}
+        current={current}
         total={total}
         style={{
           display: total ? 'block' : 'none',
