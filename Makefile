@@ -15,7 +15,7 @@ prepublish:
 
 	$(MAKE) build-umd
 
-	cp ./flow-typed/index.js.flow ./lib/index.js.flow
+	cp ./flow-typed/index.umd.js.flow ./lib/index.umd.js.flow
 
 	cp -r ./src/styles/ ./lib/styles/
 
