@@ -1,12 +1,16 @@
-# [@gemcook/pagination](https://pagination.storybook.gemcook.com)
+## [@gemcook/pagination](http://pagination.storybook.gemcook.com)
 
-## Demo
+---
 
-* [Storybook](https://modal.storybook.gemcook.com)
+React Pagination Component.
 
-# Getting Started
+### Demo
 
-## Installation
+http://pagination.storybook.gemcook.com
+
+## Getting Started
+
+### Installation
 
 ```shell
 $ npm install --save @gemcook/pagination
@@ -18,7 +22,7 @@ or
 $ yarn add @gemcook/pagination
 ```
 
-## Usage
+### Usage
 
 ```jsx
 <Pagination
@@ -30,8 +34,8 @@ $ yarn add @gemcook/pagination
 />
 ```
 
-## Documentaion
+### Documentaion
 
-### Props
+#### Props
 
-### API
+#### API
