@@ -50,9 +50,6 @@ async function build() {
         peerDepsExternal(),
         json(),
         url(),
-        postcss({
-          extensions: ['.css'],
-        }),
         scss({
           // Callback that will be called ongenerate with two arguments:
           // - styles: the contents of all style tags combined:
@@ -67,6 +64,9 @@ async function build() {
           // Determine if node process
           // should be terminated on error (default: false)
           failOnError: true,
+        }),
+        postcss({
+          extensions: ['.css'],
         }),
         commonjs({
           include: 'node_modules/**',
