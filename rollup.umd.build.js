@@ -50,21 +50,6 @@ async function build() {
         peerDepsExternal(),
         json(),
         url(),
-        // scss({
-        //   // Callback that will be called ongenerate with two arguments:
-        //   // - styles: the contents of all style tags combined:
-        //   // 'body { color: green }'
-        //   // - styleNodes: an array of style objects:
-        //   // { filename: 'body { ... }' }
-        //   output: function(styles, styleNodes) {
-        //     fs.writeFileSync(resolvePath('base.css'), styles, {
-        //       encoding: 'utf-8',
-        //     });
-        //   },
-        //   // Determine if node process
-        //   // should be terminated on error (default: false)
-        //   failOnError: true,
-        // }),
         postcss({
           extensions: ['.css'],
         }),
