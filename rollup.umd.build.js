@@ -132,7 +132,7 @@ async function build() {
 
     bundle.write({
       format: 'umd',
-      file: resolvePath('lib/index.umd.js'),
+      file: resolvePath('lib/umd/index.umd.js'),
       name: 'Pagination',
       exports: 'named',
       globals: {

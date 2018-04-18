@@ -148,7 +148,7 @@ async function build() {
 
     bundle.write({
       format: 'es',
-      file: resolvePath('lib/index.es.js'),
+      file: resolvePath('lib/es/index.es.js'),
       name: 'Pagination',
       exports: 'named',
       globals: {

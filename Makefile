@@ -23,9 +23,9 @@ prepublish:
 
 	$(MAKE) build-es
 
-	cp ./flow-typed/index.umd.js.flow ./lib/index.umd.js.flow
+	cp ./flow-typed/index.umd.js.flow ./lib/umd/index.umd.js.flow
 
-	cp ./flow-typed/index.es.js.flow ./lib/index.es.js.flow
+	cp ./flow-typed/index.es.js.flow ./lib/es/index.es.js.flow
 
 	cp -r ./src/styles/ ./lib/styles/
 

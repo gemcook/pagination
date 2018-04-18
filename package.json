@@ -1,9 +1,9 @@
 {
   "name": "@gemcook/pagination",
   "version": "0.3.1",
-  "main": "lib/index.umd.js",
-  "module": "lib/index.es.js",
-  "jsnext:main": "lib/index.es.js",
+  "main": "lib/umd/index.umd.js",
+  "module": "lib/es/index.es.js",
+  "jsnext:main": "lib/es/index.es.js",
   "sideEffects": false,
   "repository": "https://github.com/gemcook/pagination.git",
   "author": "Gemcook, Inc.",
