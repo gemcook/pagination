@@ -2,6 +2,8 @@
   "name": "@gemcook/pagination",
   "version": "0.2.7",
   "main": "lib/index.umd.js",
+  "module": "lib/index.es.js",
+  "jsnext:main": "lib/index.es.js",
   "sideEffects": false,
   "repository": "https://github.com/gemcook/pagination.git",
   "author": "Gemcook, Inc.",
@@ -94,6 +96,7 @@
   },
   "scripts": {
     "build:umd": "node rollup.umd.build.js",
+    "build:es": "node rollup.es.build.js",
     "prepublish": "make prepublish",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"

@@ -1,17 +1,34 @@
 /* @flow */
 declare module '@gemcook/pagination' {
-  declare export var Pagination: React$Node;
+  declare var Pagination: React$Node;
 
-  declare export function asyncPagination(
+  declare function asyncPagination(
     state: any,
     page: number,
     currentPage: number,
     lastPage: number,
   ): any;
 
-  declare export function syncPagination(
+  declare function syncPagination(
     data: Array<any>,
     currentPage: number,
     updateCurrentPage: (_: number) => void,
   ): Array<any>;
+
+  declare module.exports: {
+    Pagination: React$Node,
+
+    asyncPagination(
+      state: any,
+      page: number,
+      currentPage: number,
+      lastPage: number,
+    ): any,
+
+    syncPagination(
+      data: Array<any>,
+      currentPage: number,
+      updateCurrentPage: (_: number) => void,
+    ): Array<any>,
+  };
 }

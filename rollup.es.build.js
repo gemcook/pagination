@@ -38,8 +38,9 @@ async function build() {
       external: ['lodash', 'react', 'react-dom'],
       plugins: [
         resolve({
-          main: true,
+          module: true,
           browser: true,
+          jsnext: true,
           extensions: ['.js', '.json', '.jsx'],
           preferBuiltins: false,
           customResolveOptions: {
@@ -146,8 +147,8 @@ async function build() {
     });
 
     bundle.write({
-      format: 'umd',
-      file: resolvePath('lib/index.umd.js'),
+      format: 'es',
+      file: resolvePath('lib/index.es.js'),
       name: 'Pagination',
       exports: 'named',
       globals: {

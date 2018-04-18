@@ -10,12 +10,22 @@ build-umd:
 	BABEL_ENV=production \
 	yarn run build:umd
 
+build-es:
+	NODE_PATH=$(shell which node) \
+	NODE_ENV=production \
+	BABEL_ENV=production \
+	yarn run build:es
+
 prepublish:
 	$(MAKE) clean
 
 	$(MAKE) build-umd
 
+	$(MAKE) build-es
+
 	cp ./flow-typed/index.umd.js.flow ./lib/index.umd.js.flow
+
+	cp ./flow-typed/index.es.js.flow ./lib/index.es.js.flow
 
 	cp -r ./src/styles/ ./lib/styles/
 
