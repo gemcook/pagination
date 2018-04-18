@@ -1,6 +1,6 @@
 {
   "name": "@gemcook/pagination",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "main": "lib/index.umd.js",
   "module": "lib/index.es.js",
   "jsnext:main": "lib/index.es.js",
