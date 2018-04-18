@@ -1,6 +1,6 @@
 {
   "name": "@gemcook/pagination",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "main": "lib/index.umd.js",
   "sideEffects": false,
   "repository": "https://github.com/gemcook/pagination.git",
