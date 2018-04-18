@@ -4,7 +4,6 @@ import enhance from './enhance';
 import RcPagination from 'rc-pagination';
 import 'rc-pagination/assets/index.css';
 import {en_US, ja_JP} from './locale';
-import './styles/index.scss';
 
 type Props = {
   changePage: () => void,
