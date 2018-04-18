@@ -13,6 +13,7 @@ const url = require('rollup-plugin-url');
 const scss = require('rollup-plugin-scss');
 const peerDepsExternal = require('rollup-plugin-peer-deps-external');
 const resolve = require('rollup-plugin-node-resolve');
+const postcss = require('rollup-plugin-postcss');
 
 // const closureOptions = {
 //   compilationLevel: 'SIMPLE',
@@ -49,6 +50,9 @@ async function build() {
         peerDepsExternal(),
         json(),
         url(),
+        postcss({
+          extensions: ['.css'],
+        }),
         scss({
           // Callback that will be called ongenerate with two arguments:
           // - styles: the contents of all style tags combined:
