@@ -25,7 +25,7 @@ yarn add @gemcook/pagination
 ```jsx
 <Pagination
   current={store.state.current}
-  total={100}
+  total={1234}
   changePage={current => {
     store.set({ current });
   }}
@@ -35,6 +35,12 @@ yarn add @gemcook/pagination
 ## Documentaion
 
 ### Props
+
+| **Parameter** | **Type** | **Required** | **Description** |
+| :------------ | :------- | :----------- | :-------------- |
+| current       | Number   | true         | \-              |
+| total         | Number   | true         | \-              |
+| changePage    | Function | true         | \-              |
 
 ### API
 

@@ -20,7 +20,7 @@ storiesOf('Pagination', module)
       return (
         <Pagination
           current={store.state.current}
-          total={100}
+          total={1234}
           changePage={current => {
             store.set({current});
           }}
@@ -34,7 +34,7 @@ storiesOf('Pagination', module)
       return (
         <Pagination
           current={store.state.current}
-          total={100}
+          total={1234}
           changePage={current => {
             store.set({current});
           }}
@@ -49,7 +49,7 @@ storiesOf('Pagination', module)
       return (
         <Pagination
           current={store.state.current}
-          total={100}
+          total={1234}
           changePage={current => {
             store.set({current});
           }}
