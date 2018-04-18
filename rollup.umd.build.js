@@ -153,7 +153,6 @@ async function build() {
       exports: 'named',
       globals: {
         react: 'React',
-        Pagination: 'Pagination',
       },
     });
   } catch (error) {
