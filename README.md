@@ -24,6 +24,23 @@ yarn add @gemcook/pagination
 
 ## Usage
 
+## Examples
+
+### default
+
+```jsx
+<Pagination
+  total={1234}
+  current={store.state.current}
+  pageSize={10}
+  changePage={current => {
+    store.set({ current });
+  }}
+/>
+```
+
+### size of mini
+
 ```jsx
 <Pagination
   current={store.state.current}
@@ -31,6 +48,24 @@ yarn add @gemcook/pagination
   changePage={current => {
     store.set({ current });
   }}
+  size="mini"
+/>
+```
+
+### change page size
+
+```jsx
+<Pagination
+  current={store.state.current}
+  total={1234}
+  changePage={current => {
+    store.set({ current });
+  }}
+  showSizeChanger
+  onShowSizeChange={(current, pageSize) => {
+    store.set({ pageSize });
+  }}
+  pageSize={store.state.pageSize}
 />
 ```
 

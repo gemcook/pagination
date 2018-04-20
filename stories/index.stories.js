@@ -88,7 +88,7 @@ storiesOf('Pagination', module)
     }),
   )
   .add(
-    'pager',
+    'change page size',
     withState({current: 1, pageSize: 10})(({store}) => {
       return (
         <Pagination
