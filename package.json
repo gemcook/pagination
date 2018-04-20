@@ -106,6 +106,7 @@
     "classnames": "2.2.5",
     "prop-types": "15.6.1",
     "rc-pagination": "1.16.2",
+    "rc-select": "^7.7.8",
     "react": "16.3.2",
     "react-dom": "16.3.2",
     "recompose": "0.26.0"

@@ -65,4 +65,41 @@
       }
     }
   }
+
+  .rc-pagination-options-size-changer,
+  .rc-select,
+  .rc-select-enabled {
+    width: 103px;
+
+    .rc-select-arrow {
+      top: 0;
+    }
+
+    .rc-select-selection {
+      &:hover {
+        border-color: $pagination__main-color;
+        box-shadow: 0 0 2px rgba($pagination__main-color, 0.8);
+      }
+
+      &:active {
+        border-color: $pagination__main-color;
+        box-shadow: 0 0 2px rgba($pagination__main-color, 0.8);
+      }
+
+      &:focus {
+        border-color: $pagination__main-color;
+        box-shadow: 0 0 2px rgba($pagination__main-color, 0.8);
+      }
+    }
+  }
+
+  .rc-pagination-options {
+    li.rc-select-dropdown-menu-item-selected {
+      background-color: $pagination__options-active-color !important;
+    }
+
+    li.rc-select-dropdown-menu-item-active {
+      background-color: lighten($pagination__main-color, 3%) !important;
+    }
+  }
 }

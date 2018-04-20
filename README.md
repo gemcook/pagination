@@ -38,11 +38,17 @@ yarn add @gemcook/pagination
 
 ### Props
 
-| **Parameter** | **Type** | **Required** | **Description** |
-| :------------ | :------- | :----------- | :-------------- |
-| current       | Number   | true         | \-              |
-| total         | Number   | true         | \-              |
-| changePage    | Function | true         | \-              |
+| **Parameter**    | **Type**                                    | **Required** | **Default**                    | **Description**                         |
+| :--------------- | :------------------------------------------ | :----------- | :----------------------------- | :-------------------------------------- |
+| current          | number                                      | true         | undefined                      | \-                                      |
+| total            | number                                      | true         | undefined                      | \-                                      |
+| changePage       | () => void                                  | true         | undefined                      | \-                                      |
+| pageSize         | number                                      | true         | 10                             | current page size.                      |
+| size             | enum[string]                                | false        | undefined                      | Enums: `mini` `small`                   |
+| locale           | enum[string]                                | false        | ja_JP                          | Enums: `ja_JP` `us_EN`                  |
+| showSizeChanger  | boolean                                     | false        | false                          | \-                                      |
+| onShowSizeChange | (current: number, pageSize: number) => void | false        | undefined                      | Required when 'showSizeChanger' is true |
+| pageSizeOptions  | [string]                                    | false        | ['10', '20', '30', '40', '50'] | \-                                      |
 
 ### API
 

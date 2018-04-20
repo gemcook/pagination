@@ -29,7 +29,7 @@ storiesOf('Pagination', module)
     }),
   )
   .add(
-    'simple',
+    'size of mini',
     withState({current: 1})(({store}) => {
       return (
         <Pagination
@@ -38,7 +38,22 @@ storiesOf('Pagination', module)
           changePage={current => {
             store.set({current});
           }}
-          simple
+          size="mini"
+        />
+      );
+    }),
+  )
+  .add(
+    'size of small',
+    withState({current: 1})(({store}) => {
+      return (
+        <Pagination
+          current={store.state.current}
+          total={1234}
+          changePage={current => {
+            store.set({current});
+          }}
+          size="small"
         />
       );
     }),
@@ -68,6 +83,45 @@ storiesOf('Pagination', module)
           changePage={current => {
             store.set({current});
           }}
+        />
+      );
+    }),
+  )
+  .add(
+    'pager',
+    withState({current: 1, pageSize: 10})(({store}) => {
+      return (
+        <Pagination
+          current={store.state.current}
+          total={1234}
+          changePage={current => {
+            store.set({current});
+          }}
+          showSizeChanger
+          onShowSizeChange={(current, pageSize) => {
+            store.set({pageSize});
+          }}
+          pageSize={store.state.pageSize}
+        />
+      );
+    }),
+  )
+  .add(
+    'pager (size options)',
+    withState({current: 1, pageSize: 15})(({store}) => {
+      return (
+        <Pagination
+          current={store.state.current}
+          total={1234}
+          changePage={current => {
+            store.set({current});
+          }}
+          showSizeChanger
+          pageSize={store.state.pageSize}
+          onShowSizeChange={(current, pageSize) => {
+            store.set({pageSize});
+          }}
+          pageSizeOptions={['15', '30', '100', '1000']}
         />
       );
     }),
