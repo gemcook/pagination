@@ -43,8 +43,9 @@ yarn add @gemcook/pagination
 
 ```jsx
 <Pagination
-  current={store.state.current}
   total={1234}
+  current={store.state.current}
+  pageSize={10}
   changePage={current => {
     store.set({ current });
   }}
@@ -56,8 +57,9 @@ yarn add @gemcook/pagination
 
 ```jsx
 <Pagination
-  current={store.state.current}
   total={1234}
+  current={store.state.current}
+  pageSize={store.state.pageSize}
   changePage={current => {
     store.set({ current });
   }}
@@ -65,7 +67,6 @@ yarn add @gemcook/pagination
   onShowSizeChange={(current, pageSize) => {
     store.set({ pageSize });
   }}
-  pageSize={store.state.pageSize}
 />
 ```
 
@@ -75,10 +76,10 @@ yarn add @gemcook/pagination
 
 | **Parameter**    | **Type**                                    | **Required** | **Default**                    | **Description**                          |
 | :--------------- | :------------------------------------------ | :----------- | :----------------------------- | :--------------------------------------- |
-| current          | number                                      | true         | undefined                      | \-                                       |
 | total            | number                                      | true         | undefined                      | \-                                       |
-| changePage       | () => void                                  | true         | undefined                      | \-                                       |
+| current          | number                                      | true         | undefined                      | \-                                       |
 | pageSize         | number                                      | true         | 10                             | current page size.                       |
+| changePage       | () => void                                  | true         | undefined                      | \-                                       |
 | size             | enum                                        | false        | undefined                      | Enums: `'mini'` `'small'`                |
 | locale           | enum                                        | false        | 'ja_JP'                        | Enums: `'ja_JP'` `'us_EN'`               |
 | showSizeChanger  | boolean                                     | false        | false                          | \-                                       |
