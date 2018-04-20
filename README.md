@@ -2,6 +2,8 @@
 
 ---
 
+[![npm version](https://badge.fury.io/js/%40gemcook%2Fpagination.svg)](https://badge.fury.io/js/%40gemcook%2Fpagination)
+
 React Pagination Component.
 
 ## Online Demo
