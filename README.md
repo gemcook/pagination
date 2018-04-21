@@ -24,6 +24,14 @@ yarn add @gemcook/pagination
 
 ## Usage
 
+### SCSS
+
+#### Import `@gemcook/pagination/lib/styles/index.scss` to your SCSS.
+
+```scss
+@import "~@gemcook/pagination/lib/styles/index";
+```
+
 ## Examples
 
 ### default
@@ -85,8 +93,6 @@ yarn add @gemcook/pagination
 | showSizeChanger  | boolean                                     | false        | false                          | \-                                       |
 | onShowSizeChange | (current: number, pageSize: number) => void | false        | undefined                      | Required when 'showSizeChanger' is true. |
 | pageSizeOptions  | [string]                                    | false        | ['10', '20', '30', '40', '50'] | \-                                       |
-
-### API
 
 ## License
 

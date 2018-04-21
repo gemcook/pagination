@@ -1,3 +1,2 @@
 /* @flow */
-export {default as asyncPagination} from './asyncPagination';
-export {default as syncPagination} from './syncPagination';
+export {default as changeLocale} from './changeLocale';

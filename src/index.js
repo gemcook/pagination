@@ -1,5 +1,5 @@
 /* @flow */
 import Pagination from './Pagination';
-import {asyncPagination, syncPagination} from './utils';
+import {changeLocale} from './utils';
 
-export {Pagination, asyncPagination, syncPagination};
+export {Pagination, changeLocale};
