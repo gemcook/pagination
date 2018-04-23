@@ -6,6 +6,7 @@ import {withInfo} from '@storybook/addon-info';
 import {Welcome} from '@storybook/react/demo';
 import {Pagination} from '../src';
 import {withState} from '@dump247/storybook-state';
+import AsyncPagination from './AsyncComponent/Pagination';
 import '../src/styles/index.scss';
 
 storiesOf('Welcome', module).add('to Gemcook Component', () => (
@@ -124,5 +125,11 @@ storiesOf('Pagination', module)
           pageSizeOptions={['15', '30', '100', '1000']}
         />
       );
+    }),
+  )
+  .add(
+    'happy lifecycle',
+    withState({current: 1, pageSize: 15})(({store}) => {
+      return <AsyncPagination />;
     }),
   );
