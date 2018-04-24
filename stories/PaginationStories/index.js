@@ -1,1 +1,1 @@
-export {default as Pagination} from './PaginationStories';
+export {default as PaginationStories} from './PaginationStories';
