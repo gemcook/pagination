@@ -1,4 +1,15 @@
 /* @flow */
 import Pagination from './Pagination';
 
-export {Pagination};
+import {
+  makeLocalActiveData,
+  makeRemotePagination,
+  makeRemotePaginationWithImmutable,
+} from './utils';
+
+export {
+  Pagination,
+  makeLocalActiveData,
+  makeRemotePagination,
+  makeRemotePaginationWithImmutable,
+};

@@ -94,6 +94,15 @@ yarn add @gemcook/pagination
 | size            | enum                                        | false        | undefined   | Enums: `'mini'`                                                          |
 | locale          | enum                                        | false        | 'ja_JP'     | Enums: `'ja_JP'` `'us_EN'`                                               |
 
+### API
+
+#### makeLocalActiveData
+
+* 'makeLocalActiveData' generates 'activeData' from the target data.
+
+```js
+```
+
 ## License
 
 @gemcook/pagination is released under the MIT license.
