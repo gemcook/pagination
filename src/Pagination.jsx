@@ -18,6 +18,7 @@ type Props = {
   pageSize?: number,
   onShowSizeChange?: () => void,
   pageSizeOptions?: [string],
+  disabled?: boolean,
 };
 
 function Pagination(props: Props) {
@@ -31,6 +32,7 @@ function Pagination(props: Props) {
     pageSize,
     onShowSizeChange,
     pageSizeOptions,
+    disabled,
   } = props;
 
   return (
@@ -44,6 +46,7 @@ function Pagination(props: Props) {
         }}
         className={classNames({
           small_size: size === 'small',
+          disabled: disabled,
         })}
         simple={size === 'mini'}
         locale={locale === 'en_US' ? en_US : ja_JP}
