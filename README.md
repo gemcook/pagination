@@ -103,6 +103,20 @@ yarn add @gemcook/pagination
 ```js
 ```
 
+#### makeRemotePagination
+
+* 'makeRemotePagination' generates 'activeData' from the target data.
+
+```js
+```
+
+#### makeRemotePaginationWithImmutable
+
+* 'makeRemotePaginationWithImmutable' generates 'activeData' from the target data.
+
+```js
+```
+
 ## License
 
 @gemcook/pagination is released under the MIT license.
