@@ -72,7 +72,7 @@ yarn add @gemcook/pagination
     store.set({ current });
   }}
   showSizeChanger
-  onShowSizeChange={(current, pageSize) => {
+  changePageSize={(current, pageSize) => {
     store.set({ pageSize });
   }}
 />
@@ -82,17 +82,17 @@ yarn add @gemcook/pagination
 
 ### Props
 
-| **Parameter**    | **Type**                                    | **Required** | **Default**                    | **Description**                          |
-| :--------------- | :------------------------------------------ | :----------- | :----------------------------- | :--------------------------------------- |
-| total            | number                                      | true         | undefined                      | \-                                       |
-| current          | number                                      | true         | undefined                      | \-                                       |
-| pageSize         | number                                      | true         | 10                             | current page size.                       |
-| changePage       | () => void                                  | true         | undefined                      | \-                                       |
-| size             | enum                                        | false        | undefined                      | Enums: `'mini'` `'small'`                |
-| locale           | enum                                        | false        | 'ja_JP'                        | Enums: `'ja_JP'` `'us_EN'`               |
-| showSizeChanger  | boolean                                     | false        | false                          | \-                                       |
-| onShowSizeChange | (current: number, pageSize: number) => void | false        | undefined                      | Required when 'showSizeChanger' is true. |
-| pageSizeOptions  | [string]                                    | false        | ['10', '20', '30', '40', '50'] | \-                                       |
+| **Parameter**   | **Type**                                    | **Required** | **Default** | **Description**                                                          |
+| :-------------- | :------------------------------------------ | :----------- | :---------- | :----------------------------------------------------------------------- |
+| total           | number                                      | true         | undefined   | \-                                                                       |
+| current         | number                                      | true         | undefined   | \-                                                                       |
+| changePage      | () => void                                  | true         | undefined   | \-                                                                       |
+| pageSize        | number                                      | false        | 10          | current page size. It is a required item if `showSizeChanger` is `true`. |
+| showSizeChanger | boolean                                     | false        | false       | \-                                                                       |
+| changePageSize  | (current: number, pageSize: number) => void | false        | undefined   | Required when 'showSizeChanger' is true.                                 |
+| disabled        | boolean                                     | false        | false       | disabled mode.                                                           |
+| size            | enum                                        | false        | undefined   | Enums: `'mini'`                                                          |
+| locale          | enum                                        | false        | 'ja_JP'     | Enums: `'ja_JP'` `'us_EN'`                                               |
 
 ## License
 

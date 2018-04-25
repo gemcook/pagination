@@ -1,12 +1,12 @@
 /* @flow */
 import React from 'react';
-import classNames from 'classnames';
-import enhance from './enhance';
 import RcPagination from 'rc-pagination';
-import Select from 'rc-select';
+import RcSelect from 'rc-select';
+import classNames from 'classnames';
+import {en_US, ja_JP} from './locale';
+
 import 'rc-pagination/assets/index.css';
 import 'rc-select/assets/index.css';
-import {en_US, ja_JP} from './locale';
 
 type Props = {
   changePage: () => void,
@@ -16,8 +16,7 @@ type Props = {
   locale?: string,
   showSizeChanger?: boolean,
   pageSize?: number,
-  onShowSizeChange?: () => void,
-  pageSizeOptions?: [string],
+  changePageSize?: () => void,
   disabled?: boolean,
 };
 
@@ -30,17 +29,13 @@ function Pagination(props: Props) {
     locale,
     showSizeChanger,
     pageSize,
-    onShowSizeChange,
-    pageSizeOptions,
+    changePageSize,
     disabled,
   } = props;
 
   return (
     <div className="gc__pagination">
       <RcPagination
-        onChange={changePage}
-        current={current}
-        total={total}
         style={{
           display: total ? 'block' : 'none',
         }}
@@ -48,18 +43,18 @@ function Pagination(props: Props) {
           small_size: size === 'small',
           disabled: disabled,
         })}
+        total={total}
+        current={current}
+        pageSize={pageSize ? pageSize : 10}
+        onChange={changePage}
         simple={size === 'mini'}
         locale={locale === 'en_US' ? en_US : ja_JP}
-        selectComponentClass={showSizeChanger ? Select : null}
+        selectComponentClass={showSizeChanger ? RcSelect : null}
         showSizeChanger={showSizeChanger || false}
-        pageSize={pageSize ? pageSize : 10}
-        onShowSizeChange={onShowSizeChange}
-        pageSizeOptions={
-          pageSizeOptions ? pageSizeOptions : ['10', '20', '30', '40', '50']
-        }
+        onShowSizeChange={changePageSize}
       />
     </div>
   );
 }
 
-export default enhance(props => <Pagination {...props} />);
+export default Pagination;

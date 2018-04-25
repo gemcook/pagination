@@ -9,7 +9,7 @@ const PaginationStories = () => {
     .add(
       'default',
       withState({current: 1})(
-        withInfo('hey')(({store}) => {
+        withInfo('default')(({store}) => {
           return (
             <Pagination
               current={store.state.current}
@@ -25,7 +25,7 @@ const PaginationStories = () => {
     .add(
       'size of mini',
       withState({current: 1})(
-        withInfo('hey')(({store}) => {
+        withInfo('size of mini')(({store}) => {
           return (
             <Pagination
               current={store.state.current}
@@ -42,7 +42,7 @@ const PaginationStories = () => {
     .add(
       'disabled',
       withState({current: 1, disabled: true})(
-        withInfo('hey')(({store}) => {
+        withInfo('disabled')(({store}) => {
           return (
             <Pagination
               current={store.state.current}
@@ -59,7 +59,7 @@ const PaginationStories = () => {
     .add(
       'locale en_US',
       withState({current: 1})(
-        withInfo('hey')(({store}) => {
+        withInfo('locale en_US')(({store}) => {
           return (
             <Pagination
               current={store.state.current}
@@ -76,7 +76,7 @@ const PaginationStories = () => {
     .add(
       'total is 0',
       withState({current: 1})(
-        withInfo('hey')(({store}) => {
+        withInfo('total is 0')(({store}) => {
           return (
             <Pagination
               current={store.state.current}
@@ -92,19 +92,19 @@ const PaginationStories = () => {
     .add(
       'change page size',
       withState({current: 1, pageSize: 10})(
-        withInfo('hey')(({store}) => {
+        withInfo('change page size')(({store}) => {
           return (
             <Pagination
-              current={store.state.current}
               total={1234}
+              current={store.state.current}
+              pageSize={store.state.pageSize}
               changePage={current => {
                 store.set({current});
               }}
               showSizeChanger
-              onShowSizeChange={(current, pageSize) => {
+              changePageSize={(current, pageSize) => {
                 store.set({pageSize});
               }}
-              pageSize={store.state.pageSize}
             />
           );
         }),
