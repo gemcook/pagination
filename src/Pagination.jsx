@@ -4,6 +4,7 @@ import RcPagination from 'rc-pagination';
 import RcSelect from 'rc-select';
 import classNames from 'classnames';
 import {en_US, ja_JP} from './locale';
+import enhance from './enhancer';
 
 import 'rc-pagination/assets/index.css';
 import 'rc-select/assets/index.css';
@@ -18,6 +19,8 @@ type Props = {
   pageSize?: number,
   changePageSize?: () => void,
   disabled?: boolean,
+  scrollTop?: boolean,
+  changePageWithScrollTop: () => void,
 };
 
 function Pagination(props: Props) {
@@ -31,6 +34,8 @@ function Pagination(props: Props) {
     pageSize,
     changePageSize,
     disabled,
+    scrollTop,
+    changePageWithScrollTop,
   } = props;
 
   return (
@@ -46,7 +51,7 @@ function Pagination(props: Props) {
         total={total}
         current={current}
         pageSize={pageSize ? pageSize : 10}
-        onChange={changePage}
+        onChange={scrollTop ? changePageWithScrollTop : changePage}
         simple={size === 'mini'}
         locale={locale === 'en_US' ? en_US : ja_JP}
         selectComponentClass={showSizeChanger ? RcSelect : null}
@@ -57,4 +62,4 @@ function Pagination(props: Props) {
   );
 }
 
-export default Pagination;
+export default enhance(props => <Pagination {...props} />);

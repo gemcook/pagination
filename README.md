@@ -93,6 +93,7 @@ yarn add @gemcook/pagination
 | disabled        | boolean                                     | false        | false       | disabled mode.                                                           |
 | size            | enum                                        | false        | undefined   | Enums: `'mini'`                                                          |
 | locale          | enum                                        | false        | 'ja_JP'     | Enums: `'ja_JP'` `'us_EN'`                                               |
+| scrollTop       | boolean                                     | false        | false       | \-                                                                       |
 
 ### API
 
