@@ -13,7 +13,7 @@ const PaginationStories = () => {
           return (
             <Pagination
               current={store.state.current}
-              total={1234}
+              totalCount={1234}
               changePage={current => {
                 store.set({current});
               }}
@@ -29,7 +29,7 @@ const PaginationStories = () => {
           return (
             <Pagination
               current={store.state.current}
-              total={1234}
+              totalCount={1234}
               changePage={current => {
                 store.set({current});
               }}
@@ -46,7 +46,7 @@ const PaginationStories = () => {
           return (
             <Pagination
               current={store.state.current}
-              total={1234}
+              totalCount={1234}
               changePage={current => {
                 store.set({current});
               }}
@@ -63,7 +63,7 @@ const PaginationStories = () => {
           return (
             <Pagination
               current={store.state.current}
-              total={1234}
+              totalCount={1234}
               changePage={current => {
                 store.set({current});
               }}
@@ -74,13 +74,13 @@ const PaginationStories = () => {
       ),
     )
     .add(
-      'total is 0',
+      'totalCount is 0',
       withState({current: 1})(
-        withInfo('total is 0')(({store}) => {
+        withInfo('totalCount is 0')(({store}) => {
           return (
             <Pagination
               current={store.state.current}
-              total={0}
+              totalCount={0}
               changePage={current => {
                 store.set({current});
               }}
@@ -95,7 +95,7 @@ const PaginationStories = () => {
         withInfo('change page size')(({store}) => {
           return (
             <Pagination
-              total={1234}
+              totalCount={1234}
               current={store.state.current}
               pageSize={store.state.pageSize}
               changePage={current => {

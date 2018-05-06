@@ -1,6 +1,6 @@
 /* @flow */
-export {default as makeLocalActiveData} from './makeLocalActiveData';
-export {default as makeRemotePagination} from './makeRemotePagination';
+export {default as makeLocalActive} from './makeLocalActive';
+export {default as makeRemoteActive} from './makeRemoteActive';
 export {
-  default as makeRemotePaginationWithImmutable,
-} from './makeRemotePaginationWithImmutable';
+  default as makeRemoteActiveWithImmutable,
+} from './makeRemoteActiveWithImmutable';

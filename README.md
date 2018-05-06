@@ -100,9 +100,9 @@ yarn add @gemcook/pagination
 
 | **Parameter**   | **Type**                                    | **Required** | **Default** | **Description**                                                          |
 | :-------------- | :------------------------------------------ | :----------- | :---------- | :----------------------------------------------------------------------- |
-| total           | number                                      | true         | undefined   | \-                                                                       |
+| totalCount      | number                                      | true         | undefined   | \-                                                                       |
 | current         | number                                      | true         | undefined   | \-                                                                       |
-| changePage      | () => void                                  | true         | undefined   | \-                                                                       |
+| changePage      | (current: number) => void                   | true         | undefined   | \-                                                                       |
 | pageSize        | number                                      | false        | 10          | current page size. It is a required item if `showSizeChanger` is `true`. |
 | showSizeChanger | boolean                                     | false        | false       | \-                                                                       |
 | changePageSize  | (current: number, pageSize: number) => void | false        | undefined   | Required when 'showSizeChanger' is true.                                 |
@@ -113,25 +113,52 @@ yarn add @gemcook/pagination
 
 ### API
 
-#### makeLocalActiveData
+#### makeLocalActive
 
-* 'makeLocalActiveData' generates 'activeData' from the target data.
+* 'makeLocalActive' generates 'activeData' from the target data.
+
+##### args
 
 ```js
+makeLocalActive(
+  data: Array<*>,
+  current: number,
+  pageSize: number,
+): Array<*>
 ```
 
-#### makeRemotePagination
+#### makeRemoteActive
 
-* 'makeRemotePagination' generates 'activeData' from the target data.
+* 'makeRemoteActive' generates 'activeData' from the target data.
+
+##### args
 
 ```js
+makeRemoteActive(
+  pages: Object,
+  nextCurrent: number,
+  current: number,
+  totalPages: number,
+  updateActive: ([]) => void,
+): void
 ```
 
-#### makeRemotePaginationWithImmutable
+#### makeRemoteActiveWithImmutable
 
-* 'makeRemotePaginationWithImmutable' generates 'activeData' from the target data.
+* 'makeRemoteActiveWithImmutable' generates 'active' from the target data.
+* Return 'Record' of 'immutable.js'
+
+##### args
 
 ```js
+makeRemoteActiveWithImmutable(
+  state: any,
+  keyPathToPages: [string],
+  keyPathToActive: [string],
+  current: number,
+  nextCurrent: number,
+  totalPages: number,
+): Object
 ```
 
 ## License

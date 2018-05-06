@@ -2,14 +2,14 @@
 import Pagination from './Pagination';
 
 import {
-  makeLocalActiveData,
-  makeRemotePagination,
-  makeRemotePaginationWithImmutable,
+  makeLocalActive,
+  makeRemoteActive,
+  makeRemoteActiveWithImmutable,
 } from './utils';
 
 export {
   Pagination,
-  makeLocalActiveData,
-  makeRemotePagination,
-  makeRemotePaginationWithImmutable,
+  makeLocalActive,
+  makeRemoteActive,
+  makeRemoteActiveWithImmutable,
 };

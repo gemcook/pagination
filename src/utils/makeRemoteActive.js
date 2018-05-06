@@ -1,11 +1,11 @@
 /* @flow */
-export default function makeRemotePagination(
+export default function makeRemoteActive(
   pages: Object,
   nextCurrent: number,
   current: number,
-  last: number,
+  totalPages: number,
   updateActive: ([]) => void,
-) {
+): void {
   const afterNearCount = current + 1;
   const afterDistantCount = current + 2;
   const beforeNearCount = current - 1;
@@ -13,23 +13,23 @@ export default function makeRemotePagination(
 
   if (nextCurrent === 1) {
     updateActive(pages.first);
-  } else if (nextCurrent === last) {
-    updateActive(pages.last);
-  } else if (current === last && nextCurrent === last - 1) {
+  } else if (nextCurrent === totalPages) {
+    updateActive(pages.totalPages);
+  } else if (current === totalPages && nextCurrent === totalPages - 1) {
     updateActive(pages.afterDistant);
-  } else if (current === last && nextCurrent === last - 2) {
+  } else if (current === totalPages && nextCurrent === totalPages - 2) {
     updateActive(pages.afterNear);
-  } else if (current === last && nextCurrent === last - 3) {
+  } else if (current === totalPages && nextCurrent === totalPages - 3) {
     updateActive(pages.beforeNear);
-  } else if (current === last && nextCurrent === last - 4) {
+  } else if (current === totalPages && nextCurrent === totalPages - 4) {
     updateActive(pages.beforeDistant);
-  } else if (current === last - 1 && nextCurrent === last) {
+  } else if (current === totalPages - 1 && nextCurrent === totalPages) {
     updateActive(pages.afterDistant);
-  } else if (current === last - 1 && nextCurrent === last - 2) {
+  } else if (current === totalPages - 1 && nextCurrent === totalPages - 2) {
     updateActive(pages.afterNear);
-  } else if (current === last - 1 && nextCurrent === last - 3) {
+  } else if (current === totalPages - 1 && nextCurrent === totalPages - 3) {
     updateActive(pages.beforeNear);
-  } else if (current === last - 1 && nextCurrent === last - 4) {
+  } else if (current === totalPages - 1 && nextCurrent === totalPages - 4) {
     updateActive(pages.beforeDistant);
   } else if (nextCurrent === 2 && current === 1) {
     updateActive(pages.beforeDistant);

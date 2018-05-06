@@ -12,7 +12,7 @@ import 'rc-select/assets/index.css';
 type Props = {
   changePage: () => void,
   current: number,
-  total: number,
+  totalCount: number,
   size?: string,
   locale?: string,
   showSizeChanger?: boolean,
@@ -23,11 +23,13 @@ type Props = {
   changePageWithScrollTop: () => void,
 };
 
+const defaultPageSize = 10;
+
 function Pagination(props: Props) {
   const {
     changePage,
     current,
-    total,
+    totalCount,
     size,
     locale,
     showSizeChanger,
@@ -42,15 +44,15 @@ function Pagination(props: Props) {
     <div className="gc__pagination">
       <RcPagination
         style={{
-          display: total ? 'block' : 'none',
+          display: totalCount ? 'block' : 'none',
         }}
         className={classNames({
           small_size: size === 'small',
           disabled: disabled,
         })}
-        total={total}
+        total={totalCount}
         current={current}
-        pageSize={pageSize ? pageSize : 10}
+        pageSize={pageSize ? pageSize : defaultPageSize}
         onChange={scrollTop ? changePageWithScrollTop : changePage}
         simple={size === 'mini'}
         locale={locale === 'en_US' ? en_US : ja_JP}

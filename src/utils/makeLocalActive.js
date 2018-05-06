@@ -1,5 +1,5 @@
 /* @flow */
-export default function makeLocalActiveData(
+export default function makeLocalActive(
   data: Array<*>,
   current: number,
   pageSize: number,
