@@ -121,10 +121,10 @@ yarn add @gemcook/pagination
 
 ```js
 makeLocalActive(
-  data: Array<*>,
+  data: Array<Object>,
   current: number,
   pageSize: number,
-): Array<*>
+): Array<Object>
 ```
 
 #### makeRemoteActive
@@ -136,11 +136,10 @@ makeLocalActive(
 ```js
 makeRemoteActive(
   pages: Object,
-  nextCurrent: number,
   current: number,
+  nextCurrent: number,
   totalPages: number,
-  updateActive: ([]) => void,
-): void
+): Array<Object>
 ```
 
 #### makeRemoteActiveWithImmutable
@@ -154,11 +153,10 @@ makeRemoteActive(
 makeRemoteActiveWithImmutable(
   state: any,
   keyPathToPages: [string],
-  keyPathToActive: [string],
   current: number,
   nextCurrent: number,
   totalPages: number,
-): Object
+): Array<Object>
 ```
 
 ## License

@@ -1,9 +1,9 @@
 /* @flow */
 export default function makeLocalActive(
-  data: Array<*>,
+  data: Array<Object>,
   current: number,
   pageSize: number,
-): Array<*> {
+): Array<Object> {
   let startIndex;
   let endIndex;
   let nextCurrent = current;
