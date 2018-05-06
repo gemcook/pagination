@@ -32,6 +32,22 @@ yarn add @gemcook/pagination
 @import "~@gemcook/pagination/lib/styles/index";
 ```
 
+### State & Store
+
+```
+  pages: {
+    active: [],
+    first: [],
+    last: [],
+    before_distant: [],
+    before_near: [],
+    after_near: [],
+    after_distant: [],
+  },
+  totalCount: 0,
+  totalPages: 0,
+```
+
 ## Examples
 
 ### default
