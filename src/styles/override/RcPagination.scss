@@ -52,9 +52,9 @@
     }
   }
 
-  .rc-pagination-jump-prev:hover::after,
-  .rc-pagination-jump-next:hover::after {
-    color: $pagination__main-color;
+  .rc-pagination-jump-prev,
+  .rc-pagination-jump-next {
+    pointer-events: none !important;
   }
 
   &.rc-pagination-simple {
@@ -101,6 +101,20 @@
 
     li.rc-select-dropdown-menu-item-active {
       background-color: lighten($pagination__main-color, 3%) !important;
+    }
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .rc-pagination-item-after-jump-prev,
+    .rc-pagination-item-before-jump-next {
+      display: block !important;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    .rc-pagination-prev,
+    .rc-pagination-next {
+      display: none !important;
     }
   }
 }
