@@ -7,13 +7,19 @@ export default function makeRemoteActive(
 ): Array<Object> {
   const afterNearCount = current + 1;
   const afterDistantCount = current + 2;
+  const afterFiveCount = current + 5;
   const beforeNearCount = current - 1;
   const beforeDistantCount = current - 2;
+  const beforeFiveCount = current - 5;
 
   if (nextCurrent === 1) {
     return pages.first;
   } else if (nextCurrent === totalPages) {
     return pages.last;
+  } else if (nextCurrent === afterFiveCount) {
+    return pages.after_five;
+  } else if (nextCurrent === beforeFiveCount) {
+    return pages.beforeFiveCount;
   } else if (current === totalPages && nextCurrent === totalPages - 1) {
     return pages.afterDistant;
   } else if (current === totalPages && nextCurrent === totalPages - 2) {
