@@ -1,8 +1,6 @@
-/* eslint-disable */
-/* @flow */
-declare module '@gemcook/pagination' {
-  declare export var Pagination: any;
-  declare export function makeLocalActive(data: Array<Object>, current: number, pageSize: number): Array<Object>;
-  declare export function makeRemoteActive(pages: Object, current: number, nextCurrent: number, totalPages: number): Array<Object>;
-  declare export function makeRemoteActiveWithImmutable(state: any, keyPathToPages: [string], current: number, nextCurrent: number, totalPages: number): Array<Object>;
-}
+import {makeLocalActive, makeRemoteActive, makeRemoteActiveWithImmutable} from "./utils";
+import Pagination from "./Pagination";
+declare export var Pagination: any;
+declare export function makeLocalActive(data: Array<Object>, current: number, pageSize: number): Array<Object>;
+declare export function makeRemoteActive(pages: Object, current: number, nextCurrent: number, totalPages: number): Array<Object>;
+declare export function makeRemoteActiveWithImmutable(state: any, keyPathToPages: [string], current: number, nextCurrent: number, totalPages: number): Array<Object>;
