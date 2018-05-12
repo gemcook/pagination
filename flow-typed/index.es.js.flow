@@ -1,17 +1,8 @@
+/* eslint-disable */
 /* @flow */
 declare module '@gemcook/pagination' {
-  declare export var Pagination: React$Node;
-
-  declare export function asyncPagination(
-    state: any,
-    page: number,
-    currentPage: number,
-    lastPage: number,
-  ): any;
-
-  declare export function syncPagination(
-    data: Array<any>,
-    currentPage: number,
-    updateCurrentPage: (_: number) => void,
-  ): Array<any>;
+  declare export var Pagination: any;
+  declare export function makeLocalActive(data: Array<Object>, current: number, pageSize: number): Array<Object>;
+  declare export function makeRemoteActive(pages: Object, current: number, nextCurrent: number, totalPages: number): Array<Object>;
+  declare export function makeRemoteActiveWithImmutable(state: any, keyPathToPages: [string], current: number, nextCurrent: number, totalPages: number): Array<Object>;
 }

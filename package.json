@@ -88,6 +88,7 @@
     "url-loader": "1.0.1"
   },
   "scripts": {
+    "build:flow-gen": "flow gen-flow-files ./src/index.js --out-dir ./lib/",
     "build:umd": "node ./scripts/rollup/umd.build.js",
     "build:es": "node ./scripts/rollup/es.build.js",
     "prepublish": "make prepublish",
