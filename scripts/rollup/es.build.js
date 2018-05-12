@@ -1,13 +1,11 @@
-/* @flow */
 const {rollup} = require('rollup');
 const babel = require('rollup-plugin-babel');
 const prettier = require('rollup-plugin-prettier');
 const replace = require('rollup-plugin-replace');
+const resolve = require('rollup-plugin-node-resolve');
 // const stripBanner = require('rollup-plugin-strip-banner');
-const json = require('rollup-plugin-json');
-const url = require('rollup-plugin-url');
 const postcss = require('rollup-plugin-postcss');
-const {getBabelOptions, resolvePath} = require('./utils');
+const {getBabelOptions, resolvePath, isExternal} = require('./utils');
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -15,14 +13,20 @@ async function build() {
   try {
     const bundle = await rollup({
       input: resolvePath('src/index.js'),
-      external: ['lodash', 'react', 'react-dom'],
+      external: isExternal,
       plugins: [
+        resolve({
+          extensions: ['.js', '.json', '.jsx'],
+          preferBuiltins: false,
+          customResolveOptions: {
+            moduleDirectory: resolvePath('node_modules'),
+          },
+        }),
         postcss({
           extensions: ['.css'],
         }),
         babel(getBabelOptions()),
         replace({
-          __DEV__: isProduction ? 'false' : 'true',
           'process.env.NODE_ENV': isProduction
             ? "'production'"
             : "'development'",

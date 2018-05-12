@@ -1,4 +1,3 @@
-/* @flow */
 module.exports = function getClosureOptions() {
   return Object.assign(
     {},

@@ -1,4 +1,3 @@
-/* @flow */
 module.exports = function getBabelOptions() {
   return Object.assign(
     {},
@@ -8,7 +7,7 @@ module.exports = function getBabelOptions() {
       presets: [
         '@babel/flow',
         '@babel/react',
-        '@babel/preset-stage-3',
+        ['@babel/preset-stage-2', {loose: true, decoratorsLegacy: true}],
         [
           '@babel/preset-env',
           {
@@ -28,13 +27,9 @@ module.exports = function getBabelOptions() {
           },
         ],
         ['@babel/plugin-proposal-class-properties', {loose: true}],
-        ['@babel/plugin-proposal-decorators', {legacy: true}],
         '@babel/plugin-proposal-export-default-from',
-        '@babel/plugin-proposal-export-namespace-from',
         '@babel/plugin-syntax-class-properties',
-        '@babel/plugin-syntax-decorators',
         '@babel/plugin-syntax-export-default-from',
-        '@babel/plugin-syntax-export-namespace-from',
         '@babel/plugin-syntax-optional-chaining',
       ],
       runtimeHelpers: true,

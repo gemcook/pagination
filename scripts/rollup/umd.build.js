@@ -1,6 +1,3 @@
-/* @flow */
-const path = require('path');
-const fs = require('fs');
 const {rollup} = require('rollup');
 const babel = require('rollup-plugin-babel');
 const closure = require('rollup-plugin-closure-compiler-js');
@@ -23,8 +20,6 @@ async function build() {
       external: ['lodash', 'react', 'react-dom'],
       plugins: [
         resolve({
-          main: true,
-          browser: true,
           extensions: ['.js', '.json', '.jsx'],
           preferBuiltins: false,
           customResolveOptions: {
@@ -52,7 +47,6 @@ async function build() {
         }),
         babel(getBabelOptions()),
         replace({
-          __DEV__: isProduction ? 'false' : 'true',
           'process.env.NODE_ENV': isProduction
             ? "'production'"
             : "'development'",
