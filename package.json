@@ -1,7 +1,7 @@
 {
   "name": "@gemcook/pagination",
   "version": "1.3.6",
-  "main": "lib/umd/index.umd.js",
+  "main": "lib/cjs/index.cjs.js",
   "module": "lib/es/index.es.js",
   "sideEffects": false,
   "repository": "https://github.com/gemcook/pagination.git",
@@ -89,7 +89,7 @@
   },
   "scripts": {
     "build:flow-gen": "flow gen-flow-files ./src/index.js --out-dir ./lib/",
-    "build:umd": "node ./scripts/rollup/umd.build.js",
+    "build:cjs": "node ./scripts/rollup/cjs.build.js",
     "build:es": "node ./scripts/rollup/es.build.js",
     "prepublish": "make prepublish",
     "storybook": "start-storybook -p 6006",

@@ -9,7 +9,12 @@ const json = require('rollup-plugin-json');
 const url = require('rollup-plugin-url');
 const resolve = require('rollup-plugin-node-resolve');
 const postcss = require('rollup-plugin-postcss');
-const {getBabelOptions, resolvePath, getClosureOptions} = require('./utils');
+const {
+  getBabelOptions,
+  resolvePath,
+  getClosureOptions,
+  isExternal,
+} = require('./utils');
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -17,7 +22,7 @@ async function build() {
   try {
     const bundle = await rollup({
       input: resolvePath('src/index.js'),
-      external: ['lodash', 'react', 'react-dom'],
+      external: isExternal,
       plugins: [
         resolve({
           extensions: ['.js', '.json', '.jsx'],
@@ -59,8 +64,8 @@ async function build() {
     });
 
     bundle.write({
-      format: 'umd',
-      file: resolvePath('lib/umd/index.umd.js'),
+      format: 'cjs',
+      file: resolvePath('lib/cjs/index.cjs.js'),
       name: 'Pagination',
       exports: 'named',
       globals: {
