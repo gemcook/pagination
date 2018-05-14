@@ -111,6 +111,13 @@ yarn add @gemcook/pagination
 | locale          | enum                                        | false        | 'ja_JP'     | Enums: `'ja_JP'` `'us_EN'`                                               |
 | scrollTop       | boolean                                     | false        | false       | \-                                                                       |
 
+### Overried Styles
+
+```scss
+$pagination__main-color: #fa6681 !default;
+$pagination__options-active-color: #ecf0f1 !default;
+```
+
 ### API
 
 #### makeLocalActive
