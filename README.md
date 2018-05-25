@@ -29,7 +29,14 @@ yarn add @gemcook/pagination
 #### Import `@gemcook/pagination/lib/styles/index.scss` to your SCSS.
 
 ```scss
-@import "~@gemcook/pagination/lib/styles/index";
+@import '~@gemcook/pagination/lib/styles/index';
+```
+
+### Overried Styles
+
+```scss
+$pagination__main-color: #fa6681 !default;
+$pagination__options-active-color: #ecf0f1 !default;
 ```
 
 ### State & Store
@@ -58,7 +65,7 @@ yarn add @gemcook/pagination
   current={store.state.current}
   pageSize={10}
   changePage={current => {
-    store.set({ current });
+    store.set({current});
   }}
 />
 ```
@@ -71,7 +78,7 @@ yarn add @gemcook/pagination
   current={store.state.current}
   pageSize={10}
   changePage={current => {
-    store.set({ current });
+    store.set({current});
   }}
   size="mini"
 />
@@ -85,11 +92,11 @@ yarn add @gemcook/pagination
   current={store.state.current}
   pageSize={store.state.pageSize}
   changePage={current => {
-    store.set({ current });
+    store.set({current});
   }}
   showSizeChanger
   changePageSize={(current, pageSize) => {
-    store.set({ pageSize });
+    store.set({pageSize});
   }}
 />
 ```
@@ -110,13 +117,6 @@ yarn add @gemcook/pagination
 | size            | enum                                        | false        | undefined   | Enums: `'mini'`                                                          |
 | locale          | enum                                        | false        | 'ja_JP'     | Enums: `'ja_JP'` `'us_EN'`                                               |
 | scrollTop       | boolean                                     | false        | false       | \-                                                                       |
-
-### Overried Styles
-
-```scss
-$pagination__main-color: #fa6681 !default;
-$pagination__options-active-color: #ecf0f1 !default;
-```
 
 ### API
 
