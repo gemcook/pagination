@@ -1,6 +1,6 @@
 {
   "name": "@gemcook/pagination",
-  "version": "1.4.1",
+  "version": "1.5.1",
   "main": "lib/cjs/index.cjs.js",
   "module": "lib/es/index.es.js",
   "sideEffects": false,
@@ -98,10 +98,10 @@
   "dependencies": {
     "classnames": "2.2.5",
     "prop-types": "15.6.1",
-    "rc-pagination": "1.16.2",
-    "rc-select": "^7.7.8",
-    "react": "16.3.2",
-    "react-dom": "16.3.2",
+    "rc-pagination": "^1.17.8",
+    "rc-select": "^8.7.0",
+    "react": "^16.7.0-alpha.2",
+    "react-dom": "^16.7.0-alpha.2",
     "recompose": "0.26.0"
   }
 }

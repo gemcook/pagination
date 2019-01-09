@@ -13,7 +13,8 @@ const PaginationStories = () => {
           return (
             <Pagination
               current={store.state.current}
-              totalCount={1234}
+              totalCount={80}
+              showLessItems
               changePage={current => {
                 store.set({current});
               }}

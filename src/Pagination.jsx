@@ -1,5 +1,5 @@
 /* @flow */
-import React from 'react';
+import * as React from 'react';
 import RcPagination from 'rc-pagination';
 import RcSelect from 'rc-select';
 import classNames from 'classnames';
@@ -19,6 +19,7 @@ type Props = {
   pageSize?: number,
   changePageSize?: () => void,
   disabled?: boolean,
+  showLessItems?: boolean,
   scrollTop?: boolean,
   changePageWithScrollTop: () => void,
 };
@@ -52,6 +53,7 @@ function Pagination(props: Props) {
         })}
         total={totalCount}
         current={current}
+        showLessItems
         pageSize={pageSize ? pageSize : defaultPageSize}
         onChange={scrollTop ? changePageWithScrollTop : changePage}
         simple={size === 'mini'}
