@@ -23,10 +23,6 @@ prepublish:
 
 	$(MAKE) build-es
 
-	cp ./flow-typed/index.cjs.js.flow ./lib/cjs/index.cjs.js.flow
-
-	cp ./flow-typed/index.es.js.flow ./lib/es/index.es.js.flow
-
 	cp -r ./src/styles/ ./lib/styles/
 
 build:
