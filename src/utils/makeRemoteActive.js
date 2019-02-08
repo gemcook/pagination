@@ -14,6 +14,30 @@ export default function makeRemoteActive(
     return pages.first;
   } else if (nextCurrent === totalPages) {
     return pages.last;
+  } else if (
+    current === totalPages &&
+    totalPages === 4 &&
+    nextCurrent === totalPages - 1
+  ) {
+    return pages.afterNear;
+  } else if (
+    current === totalPages &&
+    totalPages === 4 &&
+    nextCurrent === totalPages - 2
+  ) {
+    return pages.beforeNear;
+  } else if (
+    current === totalPages - 1 &&
+    totalPages === 4 &&
+    nextCurrent === totalPages - 2
+  ) {
+    return pages.beforeNear;
+  } else if (
+    current === totalPages &&
+    totalPages === 3 &&
+    nextCurrent === totalPages - 1
+  ) {
+    return pages.beforeNear;
   } else if (current === totalPages && nextCurrent === totalPages - 1) {
     return pages.afterDistant;
   } else if (current === totalPages && nextCurrent === totalPages - 2) {
