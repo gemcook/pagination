@@ -49,7 +49,7 @@ function Pagination(props: Props) {
         }}
         className={classNames({
           small_size: size === 'small',
-          disabled: disabled,
+          disabled,
         })}
         total={totalCount}
         current={current}
