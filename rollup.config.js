@@ -84,6 +84,18 @@ export default [
         extensions: ['.css', '.scss'],
         extract: 'lib/styles/index.css',
       }),
+      {
+        name: 'sync scss',
+        buildEnd: err => {
+          if (err) {
+            throw err;
+          }
+
+          fs.copySync('./src/styles', './lib/styles', {
+            dereference: true,
+          });
+        },
+      },
     ],
     onwarn: (warning, warn) => {
       // NOTE: rc-menu がリファクタリングしないと解消しない問題
