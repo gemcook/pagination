@@ -3,7 +3,7 @@ export default function makeRemoteActive(
   pages: Object,
   current: number,
   nextCurrent: number,
-  totalPages: number,
+  totalPages: number
 ): Array<Object> {
   const afterNearCount = current + 1;
   const afterDistantCount = current + 2;

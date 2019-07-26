@@ -2,7 +2,7 @@
 export default function makeLocalActive(
   data: Array<Object>,
   current: number,
-  pageSize: number,
+  pageSize: number
 ): Array<Object> {
   let startIndex;
   let endIndex;
@@ -17,10 +17,10 @@ export default function makeLocalActive(
     endIndex = pageSize;
   } else {
     startIndex = Number(
-      String((current - 1) * Number(String(pageSize).slice(0, -1))) + '0',
+      String((current - 1) * Number(String(pageSize).slice(0, -1))) + '0'
     );
     endIndex = Number(
-      String(current * Number(String(pageSize).slice(0, -1))) + '0',
+      String(current * Number(String(pageSize).slice(0, -1))) + '0'
     );
   }
 

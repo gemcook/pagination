@@ -9,7 +9,7 @@ const enhance: HOC<*, *> = compose(
       window.scrollTo(0, 0);
       props.changePage(e);
     },
-  }),
+  })
 );
 
 export default enhance;

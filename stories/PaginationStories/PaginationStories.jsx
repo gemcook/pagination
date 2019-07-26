@@ -20,8 +20,8 @@ const PaginationStories = () => {
               }}
             />
           );
-        }),
-      ),
+        })
+      )
     )
     .add(
       'size of mini',
@@ -37,8 +37,8 @@ const PaginationStories = () => {
               size="mini"
             />
           );
-        }),
-      ),
+        })
+      )
     )
     .add(
       'disabled',
@@ -54,8 +54,8 @@ const PaginationStories = () => {
               disabled={store.state.disabled}
             />
           );
-        }),
-      ),
+        })
+      )
     )
     .add(
       'locale en_US',
@@ -71,8 +71,8 @@ const PaginationStories = () => {
               locale="en_US"
             />
           );
-        }),
-      ),
+        })
+      )
     )
     .add(
       'totalCount is 0',
@@ -87,8 +87,8 @@ const PaginationStories = () => {
               }}
             />
           );
-        }),
-      ),
+        })
+      )
     )
     .add(
       'change page size',
@@ -108,8 +108,8 @@ const PaginationStories = () => {
               }}
             />
           );
-        }),
-      ),
+        })
+      )
     );
 };
 
