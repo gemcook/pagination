@@ -1,7 +1,7 @@
 {
   "name": "@gemcook/pagination",
   "version": "1.18.0-test",
-  "main": "lib/cjs/index.cjs.js",
+  "main": "lib/index.js",
   "repository": "https://github.com/gemcook/pagination.git",
   "author": "Gemcook Engineers <engineers@gemcook.com>",
   "license": "MIT",
