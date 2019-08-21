@@ -6,8 +6,7 @@ import classNames from 'classnames';
 import {en_US, ja_JP} from './locale';
 import enhance from './enhancer';
 
-import 'rc-pagination/assets/index.css';
-import 'rc-select/assets/index.css';
+import './styles/index.scss';
 
 type Props = {
   changePage: () => void,
