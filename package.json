@@ -1,6 +1,6 @@
 {
   "name": "@gemcook/pagination",
-  "version": "1.18.4",
+  "version": "1.18.5",
   "main": "lib/index.js",
   "repository": "https://github.com/gemcook/pagination.git",
   "author": "Gemcook Engineers <engineers@gemcook.com>",
