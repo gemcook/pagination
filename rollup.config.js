@@ -35,7 +35,6 @@ export default [
       }),
       commonjs({
         include: 'node_modules/**',
-        ignore: ['indexof'],
         namedExports: {
           'node_modules/rc-select/node_modules/prop-types/index.js': [
             'string',
@@ -131,7 +130,6 @@ export default [
       globals: {
         react: 'React',
         'react-dom': 'ReactDOM',
-        indexof: 'indexof',
       },
     },
   },
