@@ -131,6 +131,7 @@ export default [
       globals: {
         react: 'React',
         'react-dom': 'ReactDOM',
+        indexof: 'indexof',
       },
     },
   },
