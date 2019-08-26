@@ -6,8 +6,8 @@ export type PaginationProps = {
   disabled?: boolean;
   current: number;
   pageSize: number;
-  changePage: (props?: any) => PaginationProps['onChange'];
+  changePage: PaginationProps['onChange'];
   locale?: string;
   showSizeChanger?: boolean;
-  changePageSize?: () => void;
+  changePageSize?: PaginationProps['onShowSizeChange'];
 };
