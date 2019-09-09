@@ -1,9 +1,9 @@
+import {Pagination} from './components/core';
 import utils from './lib/utils';
 
 import './styles/index.scss';
 
-export {Pagination} from './components/core';
-
+export {Pagination};
 export const makeLocalActive = utils.pagination.makeLocalActive;
 export const makeRemoteActive = utils.pagination.makeRemoteActive;
 export const makeRemoteActiveWithImmutable =
