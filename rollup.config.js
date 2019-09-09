@@ -83,7 +83,7 @@ const buildConfig = {
     }),
     postcss({
       extensions: ['.css', '.scss'],
-      extract: 'lib/styles/index.css',
+      extract: './lib/styles/index.css',
     }),
     {
       name: 'sync scss',
@@ -95,6 +95,22 @@ const buildConfig = {
         fs.copySync('./src/styles', './lib/styles', {
           dereference: true,
         });
+      },
+    },
+    {
+      name: 'create vendor - rc-pagination',
+      buildEnd: err => {
+        if (err) {
+          throw err;
+        }
+
+        fs.copySync(
+          './node_modules/rc-pagination/dist',
+          './lib/vendor/rc-pagination',
+          {
+            dereference: true,
+          }
+        );
       },
     },
   ],
