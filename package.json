@@ -15,7 +15,7 @@
     "classnames": "^2.2.6",
     "indexof": "^0.0.1",
     "rc-pagination": "^1.20.6",
-    "rc-select": "~9.2.1",
+    "rc-select": "^10.0.0-alpha.11",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
   },
