@@ -99,7 +99,7 @@ const buildConfig = {
     },
   ],
   output: {
-    file: 'lib/index.js',
+    dir: './lib',
     format: 'umd',
     name: 'Pagination',
     globals: {
@@ -129,7 +129,7 @@ const tsdConfig = {
     }),
   ],
   output: {
-    file: 'lib/@types/index.js',
+    dir: './lib/@types',
     format: 'cjs',
   },
 };
