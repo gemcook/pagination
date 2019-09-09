@@ -1,5 +1,5 @@
 export const makeLocalActive = (
-  data: {[key: string]: any}[],
+  data: any,
   current: number,
   pageSize: number
 ) => {
@@ -27,7 +27,7 @@ export const makeLocalActive = (
 };
 
 export const makeRemoteActive = (
-  pages: {[key: string]: any},
+  pages: any,
   current: number,
   nextCurrent: number,
   totalPages: number
