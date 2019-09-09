@@ -1,6 +1,7 @@
 import {Pagination} from './components/core';
 import utils from './lib/utils';
 
+import 'rc-pagination/dist/rc-pagination.min.css';
 import './styles/index.scss';
 
 export {Pagination};

@@ -7,6 +7,7 @@ import {withState} from '@dump247/storybook-state';
 
 import {Pagination} from '../';
 
+import 'rc-pagination/dist/rc-pagination.min.css';
 import '../styles/index.scss';
 
 storiesOf('Welcome', module).add('to Storybook', () => (
