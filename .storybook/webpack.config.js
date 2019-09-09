@@ -1,72 +1,26 @@
-// external
-const autoprefixer = require('autoprefixer');
-const fs = require('fs');
 const path = require('path');
-const genDefaultConfig = require('@storybook/react/dist/server/config/defaults/webpack.config.js');
 
-// internal
-const appDirectory = fs.realpathSync(process.cwd());
-const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
+// Export a function. Accept the base config as the only param.
+module.exports = async ({config, mode}) => {
+  // `mode` has a value of 'DEVELOPMENT' or 'PRODUCTION'
+  // You can change the configuration based on that.
+  // 'PRODUCTION' is used when building the static version of storybook.
 
-// initialize
-const postCSSLoaderOptions = {
-  // 外部CSS読み込みに対応した設定
-  ident: 'postcss',
-  plugins: () => [
-    require('postcss-flexbugs-fixes'),
-    autoprefixer({
-      browsers: ['> 1% in JP'],
-      flexbox: 'no-2009',
-      grid: true,
-    }),
-  ],
-};
-
-module.exports = (baseConfig, env) => {
-  const config = genDefaultConfig(baseConfig, env);
-
-  config.module.rules.push({
-    test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
-    loader: require.resolve('url-loader'),
-    options: {
-      limit: 10000,
-    },
-  });
-
-  config.module.rules.push({
-    test: /\.(js|jsx)$/,
-    include: resolvePath('src'),
-    loader: require.resolve('babel-loader'),
-    options: {
-      cacheDirectory: true,
-    },
-  });
-
-  config.module.rules.push({
-    test: /\.scss$/,
-    loaders: [
-      require.resolve('style-loader'),
-      {
-        loader: require.resolve('css-loader'),
-        options: {
-          importLoaders: 3,
-        },
-      },
-      {
-        loader: require.resolve('resolve-url-loader'),
-      },
-      {
-        loader: require.resolve('sass-loader'),
-        options: {
-          sourceMap: true,
-        },
-      },
-      {
-        loader: require.resolve('postcss-loader'),
-        options: postCSSLoaderOptions,
-      },
-    ],
-  });
+  // Make whatever fine-grained changes you need
+  config.resolve.alias = {
+    '@api': path.resolve(__dirname, '../src/api/index.ts'),
+    '@assets': path.resolve(__dirname, '../src/assets/'),
+    '@components': path.resolve(__dirname, '../src/components/'),
+    '@config': path.resolve(__dirname, '../src/config/index.ts'),
+    '@constants': path.resolve(__dirname, '../src/constants/index.ts'),
+    '@data': path.resolve(__dirname, '../src/data/index.ts'),
+    '@utils': path.resolve(__dirname, '../src/lib/utils/index.ts'),
+    '@validations': path.resolve(__dirname, '../src/lib/validations/index.ts'),
+    '@pages': path.resolve(__dirname, '../src/pages/index.ts'),
+    '@templates': path.resolve(__dirname, '../src/templates/index.ts'),
+    '@actions': path.resolve(__dirname, '../src/redux/actions/index.ts'),
+    styles: path.resolve(__dirname, '../src/styles/'),
+  };
 
   // Return the altered config
   return config;

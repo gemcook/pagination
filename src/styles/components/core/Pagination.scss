@@ -1,0 +1,133 @@
+@import '../../_value';
+
+.gc__pagination {
+  li {
+    outline: none;
+  }
+
+  .disabled {
+    pointer-events: none !important;
+    opacity: 0.7 !important;
+  }
+
+  .rc-pagination {
+    .rc-pagination-prev {
+      border: 0;
+    }
+
+    .rc-pagination-next {
+      border: 0;
+    }
+
+    .rc-pagination-item {
+      border: 0;
+
+      &:hover {
+        opacity: 0.8;
+
+        a {
+          color: $pagination__main-color;
+          text-decoration: none !important;
+        }
+      }
+    }
+
+    .rc-pagination-item-active {
+      background: {
+        color: $pagination__main-color;
+      }
+
+      color: white;
+
+      &:hover {
+        opacity: 0.8;
+
+        a {
+          color: white;
+        }
+      }
+
+      &:focus {
+        background: {
+          color: $pagination__main-color;
+        }
+
+        color: white;
+      }
+
+      &:active {
+        background: {
+          color: $pagination__main-color;
+        }
+
+        color: white;
+      }
+    }
+
+    .rc-pagination-jump-prev,
+    .rc-pagination-jump-next {
+      pointer-events: none !important;
+    }
+
+    &.rc-pagination-simple {
+      .rc-pagination-simple-pager {
+        input:hover {
+          border: {
+            color: $pagination__main-color;
+          }
+        }
+      }
+    }
+
+    .rc-pagination-options-size-changer,
+    .rc-select,
+    .rc-select-enabled {
+      width: 103px;
+
+      .rc-select-arrow {
+        top: 0;
+      }
+
+      .rc-select-selection {
+        &:hover {
+          border-color: $pagination__main-color;
+          box-shadow: 0 0 2px rgba($pagination__main-color, 0.8);
+        }
+
+        &:active {
+          border-color: $pagination__main-color;
+          box-shadow: 0 0 2px rgba($pagination__main-color, 0.8);
+        }
+
+        &:focus {
+          border-color: $pagination__main-color;
+          box-shadow: 0 0 2px rgba($pagination__main-color, 0.8);
+        }
+      }
+    }
+
+    .rc-pagination-options {
+      li.rc-select-dropdown-menu-item-selected {
+        background-color: $pagination__options-active-color !important;
+      }
+
+      li.rc-select-dropdown-menu-item-active {
+        background-color: lighten($pagination__main-color, 3%) !important;
+      }
+    }
+
+    @media only screen and (max-width: 1024px) {
+      .rc-pagination-item-after-jump-prev,
+      .rc-pagination-item-before-jump-next {
+        display: block !important;
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      .rc-pagination-prev,
+      .rc-pagination-next {
+        display: none !important;
+      }
+    }
+  }
+}
