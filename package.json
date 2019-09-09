@@ -86,7 +86,8 @@
     "test": "react-app-rewired --max_old_space_size=3072 test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "prepublishOnly": "make build"
   },
   "browserslist": {
     "production": [
