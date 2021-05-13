@@ -6,10 +6,6 @@
 
 React Pagination Component.
 
-## Online Demo
-
-* https://pagination.storybook.gemcook.com
-
 ## Installation
 
 ```shell
